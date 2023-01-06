@@ -1,7 +1,4 @@
-function Inicio() {
-    return (
-        <h1> Olá mundo! Estou numa página nova!</h1>
-    )
+.container {
+    display: flex;
+    justify-content: space-around;
 }
-
-export default Inicio;
