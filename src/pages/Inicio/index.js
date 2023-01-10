@@ -13,7 +13,7 @@ function Inicio() {
       </Titulo>
       <section className={styles.container}>
         {videos.map((video) => {
-           return <Card {...video} key={video.id} />
+          return <Card {...video} key={video.id} />;
         })}
       </section>
     </>
