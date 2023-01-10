@@ -13,7 +13,8 @@ export default function FavoritosProvider({ children }) {
   );
 }
 
-export function useFavoritoContext() { //HOOK PERSONALIZADO, PARA CRIAR UM CONTEXTO
+export function useFavoritoContext() {
+  //HOOK PERSONALIZADO, PARA CRIAR UM CONTEXTO
   const { favorito, setFavorito } = useContext(FavoritosContext); //Vamos puxar o contexto do favoritos
 
   function adicionarFavorito(novoFavorito) {
@@ -26,11 +27,17 @@ export function useFavoritoContext() { //HOOK PERSONALIZADO, PARA CRIAR UM CONTE
       novaLista.push(novoFavorito);
       return setFavorito(novaLista);
     }
-    novaLista.splice(novaLista.indexOf(novoFavorito), 1);
+    novaLista.splice(
+      novaLista.findIndex(
+        (item) =>
+          item.id === novaLista.find((item) => item.id === novoFavorito.id).id
+      ),
+      1
+    );
     return setFavorito(novaLista);
   }
   return {
     favorito,
-    adicionarFavorito
+    adicionarFavorito,
   };
 }
