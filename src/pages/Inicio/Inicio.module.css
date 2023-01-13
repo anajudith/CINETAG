@@ -1,5 +1,16 @@
 .container {
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: flex-start;
 }
+
+
+@media screen and (min-width: 700px){
+	.container {
+
+       
+        align-items: center;
+        display: flex;
+    }
+}
+
+

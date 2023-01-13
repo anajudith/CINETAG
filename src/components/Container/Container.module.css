@@ -1,6 +1,7 @@
 .container section {
     margin: 2em 8em;
     text-align: center;
-    column-gap: 1em;
+    column-gap: 4em;
     flex-wrap: wrap;
+    padding: 0 0 0 14px;
 }
