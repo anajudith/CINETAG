@@ -10,6 +10,7 @@
 
 .capa {
   width: 100%;
+  height: 350px;
 }
 
 .container h2,
@@ -25,4 +26,18 @@
   text-decoration: none;
   color: var(--preto);
   text-align: left;
+}
+
+@media screen and (min-width: 1240px) {
+  .capa {
+    background-color: red;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1605px) {
+  .capa {
+    background-color: red;
+    height: 400px;
+  }
 }
